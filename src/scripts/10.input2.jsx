@@ -39,9 +39,9 @@ function App() {
             {/* 삭제버튼 추가 */}
             <button onClick={()=>{
               let copy = [...title];
-              //splice는 새 배열을 반환함
+              //splice(삭제하고싶은 위치, 갯수)
+              //참고로 splice는 새 배열을 반환함
               copy.splice(index, 1);
-              console.log(copy);
               setTitle(copy);
             }}>삭제</button>
           </div>
@@ -56,6 +56,7 @@ function App() {
       {/* 글추가 버튼 및 기능 */}
       <button onClick={()=>{
         let copy = [...title];
+        //unshift:배열 맨 앞에 요소 추가
         copy.unshift(inputValue);
         setTitle(copy);
       }}>
