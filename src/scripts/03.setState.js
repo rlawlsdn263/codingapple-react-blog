@@ -23,6 +23,15 @@ function App() {
       <div className="black-nav">
         <h4>블로그임</h4>
       </div>
+      <button
+        onClick={() => {
+          let copy = [...title];
+          copy[0] = "여자 코트 추천";
+          setTitle(copy);
+        }}
+      >
+        바뀌는 버튼
+      </button>
       <div className="list">
         <h4>
           {title[0]}{" "}
