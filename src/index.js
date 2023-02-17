@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./scripts/05.modal";
+import App from "./scripts/06.map";
 // import App from "./App.js";
 import reportWebVitals from "./reportWebVitals";
 
