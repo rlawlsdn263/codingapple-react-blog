@@ -41,7 +41,7 @@ function App() {
         props는 문자, 숫자, 함수도 전송가능함
       */}
       {
-        modal === true ? <Modal color='skyblue' title={title}></Modal> : null
+        modal === true ? <Modal color='skyblue' setTitle={setTitle} title={title}></Modal> : null
       }
 
     </div>
@@ -56,6 +56,11 @@ function Modal(props) {
       <h4>{props.title[0]}</h4>
       <p>날짜</p>
       <p>상세내용</p>
+      <button onClick={()=>{
+        let copy = [...props.title];
+        copy[0] = '여자 코트 추천';
+        props.setTitle(copy);
+      }}>글제목 수정</button>
     </div>
   );
 }
