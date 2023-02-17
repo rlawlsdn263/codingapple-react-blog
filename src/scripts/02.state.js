@@ -6,7 +6,11 @@ function App() {
     title에는 state에 보관한 자료
     setTitle에는 state 변경을 도와주는 함수
   */
-  let [title, setTitle] = useState("남자 코트 추천");
+  let [title, setTitle] = useState([
+    "남자 코트 추천",
+    "광주 치킨 맛집",
+    "자바스크립트 독학",
+  ]);
 
   return (
     // return() 안에는 병렬로 태그 2개 이상 금지
@@ -15,7 +19,15 @@ function App() {
         <h4>블로그임</h4>
       </div>
       <div className="list">
-        <h4>{title}</h4>
+        <h4>{title[0]}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{title[1]}</h4>
+        <p>2월 17일 발행</p>
+      </div>
+      <div className="list">
+        <h4>{title[2]}</h4>
         <p>2월 17일 발행</p>
       </div>
     </div>
