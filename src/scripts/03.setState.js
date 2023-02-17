@@ -25,12 +25,22 @@ function App() {
       </div>
       <button
         onClick={() => {
+          //Array, Object 다룰 때는 원본은 보존하는 게 좋음
           let copy = [...title];
           copy[0] = "여자 코트 추천";
           setTitle(copy);
         }}
       >
         바뀌는 버튼
+      </button>
+      <button
+        onClick={() => {
+          let copy = [...title];
+          copy = copy.sort();
+          setTitle(copy);
+        }}
+      >
+        가나다순 정렬
       </button>
       <div className="list">
         <h4>
